@@ -1,4 +1,4 @@
-package schultz.dustin.io.controller;
+package com.exception.io.controller;
 
 import com.justgifit.services.ConverterService;
 import com.justgifit.services.GifEncoderService;

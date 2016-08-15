@@ -1,4 +1,4 @@
-package schultz.dustin.io.Health;
+package com.exception.io.Health;
 
 import com.justgifit.JustGifItProperties;
 import org.springframework.boot.actuate.health.Health;
