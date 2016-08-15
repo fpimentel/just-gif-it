@@ -1,5 +1,8 @@
 package schultz.dustin.io.controller;
 
+import com.justgifit.services.ConverterService;
+import com.justgifit.services.GifEncoderService;
+import com.justgifit.services.VideoDecoderService;
 import com.madgag.gif.fmsware.AnimatedGifEncoder;
 import org.bytedeco.javacv.FFmpegFrameGrabber;
 import org.bytedeco.javacv.FrameGrabber;
@@ -9,10 +12,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import schultz.dustin.io.services.ConverterService;
-import schultz.dustin.io.services.GifEncoderService;
-import schultz.dustin.io.services.VideoDecoderService;
-
 import javax.inject.Inject;
 import java.io.File;
 import java.io.IOException;
@@ -38,7 +37,7 @@ public class UploadController {
     @Inject
     private VideoDecoderService videoDecoderService;
 
-    @RequestMapping(value = "/upload", method = RequestMethod.POST, produces = 
+    @RequestMapping(value = "/upload", method = RequestMethod.POST, produces =
             MediaType.IMAGE_GIF_VALUE)
     public String upload(@RequestPart("file") MultipartFile file,
                          @RequestParam("start") int start,
